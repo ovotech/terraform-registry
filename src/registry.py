@@ -124,7 +124,7 @@ class Registry:
 
         response = self.s3.list_objects_v2(
             Bucket=self._bucket_name,
-            Prefix=f'{namespace}/{name}/{provider}/{version}/'
+            Prefix=f'{namespace}/{name}/{provider}/{version}.tar.gz'
         )
 
         if 'Contents' not in response:
